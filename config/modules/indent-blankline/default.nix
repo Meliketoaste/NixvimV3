@@ -13,14 +13,18 @@
         # spaceCharBlankline = " ";
 
         enable = true;
+        indent = {
+        char = "│";
+        #tab_char = "│";
+        };
 
         scope = {
-          enabled = true;
+          enabled = false;
           showStart = true;
         };
         exclude = {
           buftypes = ["terminal" "nofile"];
-          filetypes = ["help" "dashboard" "NvimTree" "Trouble"];
+          filetypes = ["help" "dashboard" "NvimTree" "Trouble" "notify"];
         };
       };
     };
