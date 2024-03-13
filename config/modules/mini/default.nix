@@ -13,10 +13,8 @@
       surround = {};
       move = {};
       indentscope = {
-        options = { 
           symbol = "│";
           try_as_border = true; 
-        };
       };
     };
   };

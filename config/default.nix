@@ -12,9 +12,11 @@
     ./modules/oil
     ./modules/lsp
     ./modules/nvim-cmp
+    ./modules/mini
+    ./modules/indent-blankline
+    ./modules/nix
 
     ./sets.nix
-    
   ];
 
     #globals.mapleader = " ";

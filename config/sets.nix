@@ -12,7 +12,7 @@
     luaLoader.enable = true;
 
     highlightOverride.NormalFloat.bg = "#11111b";
-    #highlight.NormalFloat.bg = "#11111b";
+    highlight.NormalFloat.bg = "#11111b";
     options = {
 
       # Enable relative line numbers

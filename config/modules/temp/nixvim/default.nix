@@ -121,6 +121,11 @@ with lib.plusultra; {
         pattern = ["*.txt" "*.md" "*.tex"];
         command = "setlocal spell";
       }
+      {
+      event = "TextYankPost";
+      group = "highlight_yank";
+      command = "silent! lua vim.highlight.on_yank{higroup='Search', timeout=200}";
+      }
     ];
   };
 }

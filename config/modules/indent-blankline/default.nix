@@ -2,7 +2,8 @@
   config = {
     options = {
       list = true;
-      listchars = "eol:↴,nbsp:↲,space: ,tab: ,trail:-";
+      listchars = "eol:↴,nbsp:↲,space: ,tab: ,trail:•";
+      #listchars = "eol:↲,tab:|->,lead: ,space: ,trail:•,extends:→,precedes:←,nbsp:␣";
     };
 
     plugins = {
