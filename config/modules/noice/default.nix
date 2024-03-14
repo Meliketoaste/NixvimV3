@@ -1,5 +1,5 @@
-{lib, ...}:
-with lib.plusultra; {
+{lib,pkgs, ...}: 
+{
   plugins = {
     noice = {
       enable = true;
@@ -99,19 +99,19 @@ with lib.plusultra; {
         }
 
         # Hide unhelpful LSP info
-        {
-          filter = {
-            event = "lsp";
-            kind = "progress";
-            cond = lua.mkRaw ''
-              function(message)
-                local client = vim.tbl_get(message.opts, "progress", "client")
-                return client == "lua_ls" or client == "null-ls" -- skip lua-ls and null-ls progress
-              end
-            '';
-          };
-          opts = {skip = true;};
-        }
+        #{
+        #  filter = {
+        #    event = "lsp";
+        #    kind = "progress";
+        #    cond = lua.mkRaw ''
+        #      function(message)
+        #        local client = vim.tbl_get(message.opts, "progress", "client")
+        #        return client == "lua_ls" or client == "null-ls" -- skip lua-ls and null-ls progress
+        #      end
+        #    '';
+        #  };
+        #  opts = {skip = true;};
+        #}
 
         # Hide unnecessary messages
         {

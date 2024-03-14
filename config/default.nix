@@ -15,6 +15,8 @@
     ./modules/mini
     ./modules/indent-blankline
     ./modules/nix
+    ./modules/noice
+    ./modules/notify
 
     ./sets.nix
   ];

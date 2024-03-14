@@ -15,6 +15,8 @@
     highlight.NormalFloat.bg = "#11111b";
     options = {
 
+
+
       # Enable relative line numbers
       number = true;
       relativenumber = true;
@@ -116,6 +118,7 @@
       #laststatus = 3; # (https://neovim.io/doc/user/options.html#'laststatus')
     };
 
+
     extraConfigLua = ''
       vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
       --local opt = vim.opt
@@ -144,6 +147,13 @@
       --  -- o.guifont = "BlexMono Nerd Font Mono:h14:Medium:i"
       --  -- o.guifont = "Liga SFMono Nerd Font:b:h15"
       --end
-    '';
+      '';
+      autoCmd = [
+        {
+          event = ["TextYankPost"];
+          desc = "Highlight when yanking (copying) text";
+          callback = {__raw = "function() vim.highlight.on_yank { higroup = 'Todo', timeout=100 } end";};
+        }
+      ];
   };
 }
